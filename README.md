@@ -1,6 +1,6 @@
 # React graphql hello world
 
-## Combining
+## Combining the following things
 
 - Simple react example: https://github.com/vlucas/universal-react-helloworld
 - Graphql for express: https://github.com/graphql/express-graphql
