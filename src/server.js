@@ -18,7 +18,7 @@ app.get('/', function (req, res) {
     content: ReactDOMServer.renderToString(<HelloWorld />)
   });
 });
-app.get('/graphql', graphqlHTTP({schema:Schema, graphql: true}))
+app.get('/graphql', graphqlHTTP({schema:Schema, graphiql: true}))
 
 // Start server
 let server = app.listen(1337, function () {
