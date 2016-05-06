@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import HelloWorld from './components/HelloWorld';
 import express from 'express';
-
+import graphqlHTTP from 'express-graphql';
+import { Schema } from './schema';
 let app = express();
 
 // Set the view engine to ejs
@@ -17,6 +18,7 @@ app.get('/', function (req, res) {
     content: ReactDOMServer.renderToString(<HelloWorld />)
   });
 });
+app.get('/graphql', graphqlHTTP({schema:Schema, graphql: true}))
 
 // Start server
 let server = app.listen(1337, function () {

@@ -7,13 +7,15 @@
   "scripts": {
     "build": "./node_modules/babel-cli/bin/babel.js src --out-dir lib --plugins transform-react-jsx --presets es2015",
     "bundle": "./node_modules/browserify/bin/cmd.js lib/client.js -o public/js/bundle.js",
-    "start": "npm run build && npm run bundle && node lib/server.js"
+    "start": "npm run build && npm run bundle && node lib/server.js",
+    "dev": "npm run build && npm run bundle && nodemon lib/server.js"
   },
   "license": "BSD",
   "dependencies": {
-    "graphql": "^0.5.0",
     "ejs": "^2.3.4",
     "express": "^4.13.3",
+    "express-graphql": "^0.5.1",
+    "graphql": "^0.5.0",
     "react": "^0.14.2",
     "react-dom": "^0.14.2"
   },
